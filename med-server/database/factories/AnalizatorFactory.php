@@ -19,7 +19,7 @@ class AnalizatorFactory extends Factory
         return [
             'name'=>fake('ru')->city(),
 
-            'short-name'=>fake('ru')->city(),
+            'short_name'=>fake('ru')->city(),
 
             'type_interaction'=>fake()->randomElement([
                'Автоматический',

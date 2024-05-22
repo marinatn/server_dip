@@ -1,6 +1,8 @@
 <?php
 
 
+use App\Http\Controllers\Api\AnalizatorController;
+use App\Http\Controllers\Api\DoctorController;
 use App\Http\Controllers\Api\ResearchController;
 use App\Http\Controllers\Api\TestController;
 use App\Http\Controllers\Api\ResearchOrderController;
@@ -18,9 +20,20 @@ Route::get('/tests/{research}', [TestController::class, 'show'])->name('test.sho
 Route::post('/test', [TestController::class, 'store'])->name('test.store');
 Route::put('/test/{research}', [TestController::class, 'update'])->name('test.update');
 
-Route::get('/orders', [ResearchOrderController::class, 'index'])->name('test.index');
-Route::get('/orders/{research_order}', [ResearchOrderController::class, 'show'])->name('test.show');
-Route::post('/order', [ResearchOrderController::class, 'store'])->name('test.store');
-Route::put('/order/{research}', [ResearchOrderController::class, 'update'])->name('test.update');
+Route::get('/orders', [ResearchOrderController::class, 'index'])->name('order.index');
+Route::get('/orders/{research_order}', [ResearchOrderController::class, 'show'])->name('order.show');
+Route::post('/order', [ResearchOrderController::class, 'store'])->name('order.store');
+Route::put('/order/{research}', [ResearchOrderController::class, 'update'])->name('order.update');
+
+
+Route::get('/analizators', [AnalizatorController::class, 'index'])->name('analizator.index');
+Route::get('/analizator/{analizator}', [AnalizatorController::class, 'show'])->name('analizator.show');
+Route::post('/analizator', [AnalizatorController::class, 'store'])->name('analizator.store');
+Route::put('/analizator/{analizator}', [AnalizatorController::class, 'update'])->name('analizator.update');
+
+Route::get('/doctors', [AnalizatorController::class, 'index'])->name('doctor.index');
+Route::get('/doctor/{doctor}', [AnalizatorController::class, 'show'])->name('doctor.show');
+Route::post('/doctor', [AnalizatorController::class, 'store'])->name('doctor.store');
+Route::put('/doctor/{doctor}', [AnalizatorController::class, 'update'])->name('doctor.update');
 
 // ...

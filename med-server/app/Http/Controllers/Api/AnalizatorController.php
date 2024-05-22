@@ -7,7 +7,7 @@ use App\Models\Analizator;
 use Illuminate\Http\Request;
 use App\Http\Requests\AnalizatorRequest;
 use Illuminate\Http\Response;
-use App\Http\Resources\DAnalizatorResource;
+use App\Http\Resources\AnalizatorResource;
 
 class AnalizatorController extends BaseController
 {
@@ -24,10 +24,10 @@ class AnalizatorController extends BaseController
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
-    {
-        //
-    }
+//    public function create()
+//    {
+//        //
+//    }
 
     /**
      * Store a newly created resource in storage.

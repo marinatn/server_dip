@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
-use App\Models\Analizator;
-use App\Http\Requests\StoreAnalizatorRequest;
-use App\Http\Requests\UpdateAnalizatorRequest;
+use App\Http\Requests\Storetype_interactionRequest;
+use App\Http\Requests\Updatetype_interactionRequest;
+use App\Models\type_interaction;
 
-class AnalizatorController
+class TypeInteractionController
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +27,7 @@ class AnalizatorController
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreAnalizatorRequest $request)
+    public function store(Storetype_interactionRequest $request)
     {
         //
     }
@@ -35,7 +35,7 @@ class AnalizatorController
     /**
      * Display the specified resource.
      */
-    public function show(Analizator $analizator)
+    public function show(type_interaction $type_interaction)
     {
         //
     }
@@ -43,7 +43,7 @@ class AnalizatorController
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Analizator $analizator)
+    public function edit(type_interaction $type_interaction)
     {
         //
     }
@@ -51,7 +51,7 @@ class AnalizatorController
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateAnalizatorRequest $request, Analizator $analizator)
+    public function update(Updatetype_interactionRequest $request, type_interaction $type_interaction)
     {
         //
     }
@@ -59,7 +59,7 @@ class AnalizatorController
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Analizator $analizator)
+    public function destroy(type_interaction $type_interaction)
     {
         //
     }

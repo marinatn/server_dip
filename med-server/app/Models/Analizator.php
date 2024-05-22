@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Analizator extends Model
 {
     use HasFactory;
+
+    protected $table = 'analizator';
+    protected $perPage = 20;
+
+    protected $fillable = ['short_name', 'type_interaction'];
 }

@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Requests\Storetype_interactionRequest;
-use App\Http\Requests\Updatetype_interactionRequest;
-use App\Models\type_interaction;
+use App\Http\Controllers\BaseController;
+use App\Models\Branch;
+use Illuminate\Http\Request;
+use App\Http\Requests\TypeInteractionRequest;
+use Illuminate\Http\Response;
+use App\Http\Resources\TypeInteractionResource;
 
 class TypeInteractionController
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    public function index(Request $request)
     {
         //
     }

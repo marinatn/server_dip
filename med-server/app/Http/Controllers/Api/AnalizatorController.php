@@ -16,9 +16,10 @@ class AnalizatorController extends BaseController
      */
     public function index(Request $request)
     {
-        $analizators = Analizator::paginate();
-
-        return AnalizatorResource:: collection($analizators);
+//        $analizators = Analizator::paginate();
+//
+//        return AnalizatorResource:: collection($analizators);
+        return Analizator::all();
     }
 
     /**

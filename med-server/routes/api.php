@@ -3,6 +3,7 @@
 
 use App\Http\Controllers\Api\AnalizatorController;
 use App\Http\Controllers\Api\DoctorController;
+use App\Http\Controllers\Api\InteractionController;
 use App\Http\Controllers\Api\ResearchController;
 use App\Http\Controllers\Api\TestController;
 use App\Http\Controllers\Api\ResearchOrderController;
@@ -31,14 +32,14 @@ Route::get('/analizator/{analizator}', [AnalizatorController::class, 'show'])->n
 Route::post('/analizator', [AnalizatorController::class, 'store'])->name('analizator.store');
 Route::put('/analizator/{analizator}', [AnalizatorController::class, 'update'])->name('analizator.update');
 
-Route::get('/doctors', [AnalizatorController::class, 'index'])->name('doctor.index');
-Route::get('/doctor/{doctor}', [AnalizatorController::class, 'show'])->name('doctor.show');
-Route::post('/doctor', [AnalizatorController::class, 'store'])->name('doctor.store');
-Route::put('/doctor/{doctor}', [AnalizatorController::class, 'update'])->name('doctor.update');
+Route::get('/doctors', [DoctorController::class, 'index'])->name('doctor.index');
+Route::get('/doctor/{doctor}', [DoctorController::class, 'show'])->name('doctor.show');
+Route::post('/doctor', [DoctorController::class, 'store'])->name('doctor.store');
+Route::put('/doctor/{doctor}', [DoctorController::class, 'update'])->name('doctor.update');
 
 Route::get('/interactions', [InteractionController::class, 'index'])->name('interaction.index');
 Route::get('/interaction/{interaction}', [InteractionController::class, 'show'])->name('interactionr.show');
 Route::post('/interaction', [InteractionController::class, 'store'])->name('interaction.store');
-Route::put('/interaction/{interaction}', [InteractionrController::class, 'update'])->name('interaction.update');
+Route::put('/interaction/{interaction}', [InteractionController::class, 'update'])->name('interaction.update');
 
 // ...

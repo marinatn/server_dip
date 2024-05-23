@@ -19,7 +19,7 @@ class DoctorController extends BaseController
 //        $doctors = Doctor::paginate();
 //
 //        return DoctorResource::collection($doctors);
-        return Doctors :: all();
+        return Doctor:: all();
     }
 
     /**

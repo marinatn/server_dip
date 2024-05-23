@@ -2,11 +2,11 @@
 
 namespace App\Policies;
 
+use App\Models\Interaction;
 use App\Models\User;
-use App\Models\type_equipment;
 use Illuminate\Auth\Access\Response;
 
-class TypeEquipmentPolicy
+class InteractionPolicy
 {
     /**
      * Determine whether the user can view any models.
@@ -19,7 +19,7 @@ class TypeEquipmentPolicy
     /**
      * Determine whether the user can view the model.
      */
-    public function view(User $user, type_equipment $typeEquipment): bool
+    public function view(User $user, Interaction $interaction): bool
     {
         //
     }
@@ -35,7 +35,7 @@ class TypeEquipmentPolicy
     /**
      * Determine whether the user can update the model.
      */
-    public function update(User $user, type_equipment $typeEquipment): bool
+    public function update(User $user, Interaction $interaction): bool
     {
         //
     }
@@ -43,7 +43,7 @@ class TypeEquipmentPolicy
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, type_equipment $typeEquipment): bool
+    public function delete(User $user, Interaction $interaction): bool
     {
         //
     }
@@ -51,7 +51,7 @@ class TypeEquipmentPolicy
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(User $user, type_equipment $typeEquipment): bool
+    public function restore(User $user, Interaction $interaction): bool
     {
         //
     }
@@ -59,7 +59,7 @@ class TypeEquipmentPolicy
     /**
      * Determine whether the user can permanently delete the model.
      */
-    public function forceDelete(User $user, type_equipment $typeEquipment): bool
+    public function forceDelete(User $user, Interaction $interaction): bool
     {
         //
     }

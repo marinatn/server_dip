@@ -36,4 +36,9 @@ Route::get('/doctor/{doctor}', [AnalizatorController::class, 'show'])->name('doc
 Route::post('/doctor', [AnalizatorController::class, 'store'])->name('doctor.store');
 Route::put('/doctor/{doctor}', [AnalizatorController::class, 'update'])->name('doctor.update');
 
+Route::get('/interactions', [InteractionController::class, 'index'])->name('interaction.index');
+Route::get('/interaction/{interaction}', [InteractionController::class, 'show'])->name('interactionr.show');
+Route::post('/interaction', [InteractionController::class, 'store'])->name('interaction.store');
+Route::put('/interaction/{interaction}', [InteractionrController::class, 'update'])->name('interaction.update');
+
 // ...

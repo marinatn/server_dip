@@ -11,9 +11,7 @@ use App\Http\Resources\AnalizatorResource;
 
 class AnalizatorController extends BaseController
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index(Request $request)
     {
 //        $analizators = Analizator::paginate();
@@ -30,9 +28,7 @@ class AnalizatorController extends BaseController
 //        //
 //    }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+
     public function store(AnalizatorRequest $request): Analizator
     {
         return Analizator::create($request->validated());

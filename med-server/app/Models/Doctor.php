@@ -28,7 +28,7 @@ class Doctor extends Model
      *
      * @var array<int, string>
      */
-    protected $fillable = ['fio', 'snils'];
+    protected $fillable = ['fio', 'post', 'snils'];
 
 
 }

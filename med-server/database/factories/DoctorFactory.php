@@ -12,6 +12,7 @@ class DoctorFactory extends Factory {
     {
         return [
             'fio' => fake ('ru') -> name(),
+            'post' => fake ('ru') ->asciify(),
             'snils' => fake()->numberBetween(100000000, 999999999),
         ];
     }

@@ -5,7 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class type_equipment extends Model
+class Interaction extends Model
 {
     use HasFactory;
+
+    protected $table = 'interactions';
+    protected $perPage = 20;
+
+    protected $fillable = ['name'];
 }

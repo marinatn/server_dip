@@ -23,6 +23,7 @@ class DoctorRequest extends FormRequest
     {
         return [
 			'fio' => 'required|string',
+            'post' => 'required|string',
 			'snils' => 'required|string',
         ];
     }

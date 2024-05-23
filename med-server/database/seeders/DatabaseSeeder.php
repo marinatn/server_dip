@@ -6,6 +6,7 @@ use App\Models\Ad;
 use App\Models\Analizator;
 use App\Models\Branch;
 use App\Models\Doctor;
+use App\Models\Equipment;
 use App\Models\Interaction;
 use App\Models\Organisation;
 use App\Models\Research;
@@ -31,5 +32,6 @@ class DatabaseSeeder extends Seeder
         Test::factory(100)->create();
         Analizator::factory(100)->create();
         Interaction::factory(100)->create();
+        Equipment::factory(100)->create();
     }
 }

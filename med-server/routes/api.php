@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\AnalizatorController;
 use App\Http\Controllers\Api\DoctorController;
 use App\Http\Controllers\Api\EquipmentController;
 use App\Http\Controllers\Api\InteractionController;
+use App\Http\Controllers\Api\PointController;
 use App\Http\Controllers\Api\ResearchController;
 use App\Http\Controllers\Api\ResearchOrderController;
 use App\Http\Controllers\Api\TestController;
@@ -47,4 +48,9 @@ Route::get('/equipments', [EquipmentController::class, 'index'])->name('equipmen
 Route::get('/equipment/{equipment}', [EquipmentController::class, 'show'])->name('equipment.show');
 Route::post('/equipment', [EquipmentController::class, 'store'])->name('equipment.store');
 Route::put('/equipment/{equipment}', [EquipmentController::class, 'update'])->name('equipment.update');
+
+Route::get('/points', [PointController::class, 'index'])->name('point.index');
+Route::get('/point/{point}', [PointController::class, 'show'])->name('point.show');
+Route::post('/point', [PointController::class, 'store'])->name('point.store');
+Route::put('/point{point}', [PointController::class, 'update'])->name('point.update');
 // ...

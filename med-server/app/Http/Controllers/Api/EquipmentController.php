@@ -4,10 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\BaseController;
 use App\Http\Requests\EquipmentRequest;
-use App\Models\Doctor;
 use App\Models\Equipment;
 use Illuminate\Http\Request;
-use App\Http\Requests\DoctorRequest;
 use Illuminate\Http\Response;
 use App\Http\Resources\EquipmentResource;
 

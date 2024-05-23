@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Ad;
 use App\Models\Analizator;
+use App\Models\Point;
 use App\Models\Branch;
 use App\Models\Doctor;
 use App\Models\Equipment;
@@ -33,5 +34,6 @@ class DatabaseSeeder extends Seeder
         Analizator::factory(100)->create();
         Interaction::factory(100)->create();
         Equipment::factory(100)->create();
+        Point::factory(100)->create();
     }
 }

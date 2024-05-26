@@ -5,11 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Point extends Model
+class Sample extends Model
 {
-    use HasFactor
-    protected $table = 'points';
+    use HasFactory;
+
+    protected $table = 'samples';
     protected $perPage = 20;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'code', 'biomaterial', 'container'];
 }

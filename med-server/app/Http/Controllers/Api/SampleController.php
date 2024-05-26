@@ -16,9 +16,10 @@ class SampleController extends BaseController
      */
     public function index(Request $request)
     {
-        $samples = Sample::paginate();
-
-        return SampleResource::collection($samples);
+//        $samples = Sample::paginate();
+//
+//        return SampleResource::collection($samples);
+        return Sample::all();
     }
 
     /**

@@ -12,5 +12,5 @@ class Analizator extends Model
     protected $table = 'analizators';
     protected $perPage = 20;
 
-    protected $fillable = ['short_name', 'type_interaction'];
+    protected $fillable = ['name', 'short_name', 'type_interaction', 'type_equipment'];
 }

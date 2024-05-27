@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Api;
 use App\Models\Point;
 use Illuminate\Http\Request;
 use App\Http\Requests\PointRequest;
-use Illuminate\Http\Point;
 use Illuminate\Routing\Controller;
 
 class PointController extends Controller
@@ -40,9 +39,9 @@ class PointController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(PointRequest $point, Point $point): Point
+    public function update(PointRequest $request, Point $point): Point
     {
-        $point->update($point->validated());
+        $point->update($request->validated());
 
         return $point;
     }

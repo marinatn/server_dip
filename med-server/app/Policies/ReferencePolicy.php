@@ -2,11 +2,11 @@
 
 namespace App\Policies;
 
-use App\Models\Interaction;
+use App\Models\Reference;
 use App\Models\User;
 use Illuminate\Auth\Access\Response;
 
-class InteractionPolicy
+class ReferencePolicy
 {
     /**
      * Determine whether the user can view any models.
@@ -19,7 +19,7 @@ class InteractionPolicy
     /**
      * Determine whether the user can view the model.
      */
-    public function view(User $user, Interaction $interaction): bool
+    public function view(User $user, Reference $reference): bool
     {
         //
     }
@@ -35,7 +35,7 @@ class InteractionPolicy
     /**
      * Determine whether the user can update the model.
      */
-    public function update(User $user, Interaction $interaction): bool
+    public function update(User $user, Reference $reference): bool
     {
         //
     }
@@ -43,7 +43,7 @@ class InteractionPolicy
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, Interaction $interaction): bool
+    public function delete(User $user, Reference $reference): bool
     {
         //
     }
@@ -51,7 +51,7 @@ class InteractionPolicy
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(User $user, Interaction $interaction): bool
+    public function restore(User $user, Reference $reference): bool
     {
         //
     }
@@ -59,7 +59,7 @@ class InteractionPolicy
     /**
      * Determine whether the user can permanently delete the model.
      */
-    public function forceDelete(User $user, Interaction $interaction): bool
+    public function forceDelete(User $user, Reference $reference): bool
     {
         //
     }

@@ -67,7 +67,7 @@ class AnalizatorController extends BaseController
     {
        $analizator->delete();
 
-       return response()->noContent;
+       return response()->noContent();
     }
 }
 

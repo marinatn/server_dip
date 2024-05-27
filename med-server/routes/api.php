@@ -8,6 +8,9 @@ use App\Http\Controllers\Api\InteractionController;
 use App\Http\Controllers\Api\PointController;
 use App\Http\Controllers\Api\ResearchController;
 use App\Http\Controllers\Api\ResearchOrderController;
+use App\Http\Controllers\Api\SampleController;
+use App\Http\Controllers\Api\BiomaterialController;
+use App\Http\Controllers\Api\ContainerController;
 use App\Http\Controllers\Api\TestController;
 use Illuminate\Support\Facades\Route;
 
@@ -56,4 +59,19 @@ Route::get('/points', [PointController::class, 'index'])->name('point.index');
 Route::get('/point/{point}', [PointController::class, 'show'])->name('point.show');
 Route::post('/point', [PointController::class, 'store'])->name('point.store');
 Route::put('/point{point}', [PointController::class, 'update'])->name('point.update');
+
+Route::get('/biomaterials', [BiomaterialController::class, 'index'])->name('biomaterial.index');
+Route::get('/biomaterial/{biomaterial}', [BiomaterialController::class, 'show'])->name('biomaterial.show');
+Route::post('/biomaterial', [BiomaterialController::class, 'store'])->name('biomaterial.store');
+Route::put('/biomaterial{biomaterial}', [BiomaterialController::class, 'update'])->name('biomaterial.update');
+
+Route::get('/containers', [ContainerController::class, 'index'])->name('container.index');
+Route::get('/container/{container}', [ContainerController::class, 'show'])->name('container.show');
+Route::post('/container', [ContainerController::class, 'store'])->name('container.store');
+Route::put('/container{container}', [ContainerController::class, 'update'])->name('container.update');
+
+Route::get('/samples', [SampleController::class, 'index'])->name('sample.index');
+Route::get('/sample/{sample}', [SampleController::class, 'show'])->name('sample.show');
+Route::post('/sample', [SampleController::class, 'store'])->name('sample.store');
+Route::put('/sample{sample}', [SampleController::class, 'update'])->name('sample.update');
 // ...

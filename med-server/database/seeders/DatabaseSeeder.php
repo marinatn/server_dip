@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use App\Models\Ad;
 use App\Models\Analizator;
+use App\Models\Biomaterial;
+use App\Models\Container;
 use App\Models\Point;
 use App\Models\Branch;
 use App\Models\Doctor;
@@ -12,6 +14,7 @@ use App\Models\Interaction;
 use App\Models\Organisation;
 use App\Models\Research;
 use App\Models\ResearchOrder;
+use App\Models\Sample;
 use App\Models\Test;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -34,6 +37,8 @@ class DatabaseSeeder extends Seeder
         Analizator::factory(100)->create();
         Interaction::factory(100)->create();
         Equipment::factory(100)->create();
-        Point::factory(100)->create();
+        Sample::factory(100)->create();
+        Biomaterial::factory(100)->create();
+        Container::factory(100)->create();
     }
 }

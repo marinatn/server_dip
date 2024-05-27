@@ -5,10 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Point extends Model
+class Container extends Model
 {
-    use HasFactor
-    protected $table = 'points';
+    use HasFactory;
+
+    protected $table = 'containers';
     protected $perPage = 20;
 
     protected $fillable = ['name'];

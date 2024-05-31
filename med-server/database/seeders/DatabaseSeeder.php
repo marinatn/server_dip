@@ -6,6 +6,7 @@ use App\Models\Ad;
 use App\Models\Analizator;
 use App\Models\Biomaterial;
 use App\Models\Container;
+use App\Models\Patient;
 use App\Models\Point;
 use App\Models\Branch;
 use App\Models\Doctor;
@@ -40,5 +41,6 @@ class DatabaseSeeder extends Seeder
         Sample::factory(100)->create();
         Biomaterial::factory(100)->create();
         Container::factory(100)->create();
+        Patient::factory(100)->create();
     }
 }

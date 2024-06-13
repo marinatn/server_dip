@@ -15,9 +15,6 @@ class TestController extends BaseController
      */
     public function index(Request $request)
     {
-//        $tests = Test::paginate();
-//
-//        return TestResource::collection($tests);
         return Test::all();
     }
 

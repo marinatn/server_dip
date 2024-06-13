@@ -23,8 +23,8 @@ class StoreReferenceRequest extends FormRequest
     {
         return [
             'name' => 'required|string',
-            'min' => 'required|integer',
-            'max' => 'required|integer',
+            'min' => 'required|numeric|between:0,999.99',
+            'max' => 'required|numeric|between:0,999.99',
             'risks' => 'required|string',
         ];
     }

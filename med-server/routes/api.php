@@ -18,18 +18,9 @@ use App\Http\Controllers\Api\TestController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/researches', [ResearchController::class, 'index'])->name('research.index');
-Route::get('/researches/{research}', [ResearchController::class, 'show'])->name('research.show');
-Route::post('/research', [ResearchController::class, 'store'])->name('research.store');
-Route::put('/research/{research}', [ResearchController::class, 'update'])->name('research.update');
-Route::delete('/research/{research}', [ResearchController::class, 'destroy'])->name('research.destroy');
 
 
-Route::get('/orders', [ResearchOrderController::class, 'index'])->name('order.index');
-Route::get('/orders/{research_order}', [ResearchOrderController::class, 'show'])->name('order.show');
-Route::post('/order', [ResearchOrderController::class, 'store'])->name('order.store');
-Route::put('/order/{research_order}', [ResearchOrderController::class, 'update'])->name('order.update');
-Route::delete('/order/{research_order}', [ResearchOrderController::class, 'destroy'])->name('order.destroy');
+
 
 Route::get('/analizators', [AnalizatorController::class, 'index'])->name('analizator.index');
 Route::get('/analizator/{analizator}', [AnalizatorController::class, 'show'])->name('analizator.show');
@@ -74,6 +65,12 @@ Route::post('/sample', [SampleController::class, 'store'])->name('sample.store')
 Route::put('/sample/{sample}', [SampleController::class, 'update'])->name('sample.update');
 // ...
 
+// Orders
+Route::get('/orders', [ResearchOrderController::class, 'index'])->name('order.index');
+Route::get('/order/{research_order}', [ResearchOrderController::class, 'show'])->name('order.show');
+Route::post('/order', [ResearchOrderController::class, 'store'])->name('order.store');
+Route::put('/order/{research_order}', [ResearchOrderController::class, 'update'])->name('order.update');
+Route::delete('/order/{research_order}', [ResearchOrderController::class, 'destroy'])->name('order.destroy');
 
 // Patients
 Route::get('/patients', [PatientController::class, 'index'])->name('patient.index');
@@ -82,7 +79,12 @@ Route::post('/patient', [PatientController::class, 'store'])->name('patient.stor
 Route::put('/patient/{patient}', [PatientController::class, 'update'])->name('patient.update');
 Route::delete('/patient/{patient}', [PatientController::class, 'destroy'])->name('patient.destroy');
 
-
+// Researches
+Route::get('/researches', [ResearchController::class, 'index'])->name('research.index');
+Route::get('/research/{research}', [ResearchController::class, 'show'])->name('research.show');
+Route::post('/research', [ResearchController::class, 'store'])->name('research.store');
+Route::put('/research/{research}', [ResearchController::class, 'update'])->name('research.update');
+Route::delete('/research/{research}', [ResearchController::class, 'destroy'])->name('research.destroy');
 
 // Tests
 Route::get('/tests', [TestController::class, 'index'])->name('test.index');

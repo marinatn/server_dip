@@ -22,9 +22,10 @@ class ResearchOrderRequest extends FormRequest
     public function rules(): array
     {
         return [
-			'fio' => 'required|string',
-			'order_number' => 'required',
-			'cito' => 'required',
+			'patient_id' => 'required|integer|exists:patients,id',
+            'researches' => 'required|string',
+//			'bar_code' => 'required|string',
+			'is_cito' => 'required|boolean',
         ];
     }
 }

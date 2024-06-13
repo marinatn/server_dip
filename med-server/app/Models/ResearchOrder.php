@@ -31,7 +31,12 @@ class ResearchOrder extends Model
      *
      * @var array<int, string>
      */
-    protected $fillable = ['fio', 'order_number', 'cito'];
+    protected $fillable = [
+        'patient_id',
+        'researches',
+//        'bar_code',
+        'is_cito'
+    ];
 
 
 }

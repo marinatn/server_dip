@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('research_orders', function (Blueprint $table) {
             $table->id();
-            $table->string('fio');
-            $table->integer('order_number');
-            $table->boolean('cito');
+            $table->integer('patient_id');
+            $table->json('researches');
+//            $table->string('bar_code');
+            $table->boolean('is_cito');
             $table->timestamps();
         });
     }

@@ -18,7 +18,7 @@ class ResearchOrderController extends BaseController
     {
         $researchOrders = ResearchOrder::paginate();
 
-        return ResearchOrderResource::collection($researchOrders);
+        return ResearchOrder::all();
     }
 
     /**
@@ -26,7 +26,9 @@ class ResearchOrderController extends BaseController
      */
     public function store(ResearchOrderRequest $request): ResearchOrder
     {
-        return ResearchOrder::create($request->validated());
+        $researchOrder = ResearchOrder::create($request->all());
+        $researchOrder['bar_code'] = $this->getBarCode($researchOrder);
+        return $researchOrder;
     }
 
     /**
@@ -34,6 +36,7 @@ class ResearchOrderController extends BaseController
      */
     public function show(ResearchOrder $researchOrder): ResearchOrder
     {
+        $researchOrder['bar_code'] = $this->getBarCode($researchOrder);
         return $researchOrder;
     }
 
@@ -43,7 +46,7 @@ class ResearchOrderController extends BaseController
     public function update(ResearchOrderRequest $request, ResearchOrder $researchOrder): ResearchOrder
     {
         $researchOrder->update($request->validated());
-
+        $researchOrder['bar_code'] = $this->getBarCode($researchOrder);
         return $researchOrder;
     }
 
@@ -52,5 +55,15 @@ class ResearchOrderController extends BaseController
         $researchOrder->delete();
 
         return response()->noContent();
+    }
+
+    private function getBarCode(ResearchOrder $researchOrder)
+    {
+        // на самом деле достаточно только id
+        return $researchOrder['id']
+//            . '|' .
+//            $researchOrder['patient_id'] . '|' .
+//            date_format($researchOrder['created_at'], 'U')
+            ;
     }
 }

@@ -32,14 +32,14 @@ class DatabaseSeeder extends Seeder
         Branch::factory(100)->create();
         Doctor::factory(100)->create();
         Organisation::factory(100)->create();
-        Research::factory(100)->create();
-        ResearchOrder::factory(100)->create();
+//        Research::factory(100)->create();
+//        ResearchOrder::factory(100)->create();
         Analizator::factory(100)->create();
         Interaction::factory(100)->create();
         Equipment::factory(100)->create();
         Sample::factory(100)->create();
         Biomaterial::factory(100)->create();
         Container::factory(100)->create();
-        Patient::factory(100)->create();
+//        Patient::factory(100)->create();
     }
 }

@@ -18,8 +18,8 @@ class ReferenceFactory extends Factory
     {
         return [
             'name' => 'required|string',
-            'min' => 'required|integer',
-            'max' => 'required|integer',
+            'min' => 'required|float',
+            'max' => 'required|float',
             'risks' => 'required|string',
         ];
     }

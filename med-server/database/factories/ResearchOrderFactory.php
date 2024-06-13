@@ -17,9 +17,9 @@ class ResearchOrderFactory extends Factory
     public function definition(): array
     {
         return [
-            'fio' => fake('ru')->name(),
-            'order_number' => fake()->numberBetween(10000000, 99999999),
-            'cito' => fake()->boolean(),
+//            'fio' => fake('ru')->name(),
+//            'order_number' => fake()->numberBetween(10000000, 99999999),
+//            'cito' => fake()->boolean(),
         ];
     }
 }

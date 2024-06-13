@@ -17,14 +17,14 @@ class ResearchFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->randomElement([
-                'Исследование на ВИЧ',
-                'Исследование на диабет',
-                'Исследование на зависимости',
-                'Судмед экспертиза'
-            ]),
-            'code' => fake()->numberBetween(10000000, 99999998),
-            'tests' => json_encode([1, 2, 3, 4]),
+//            'name' => fake()->randomElement([
+//                'Исследование на ВИЧ',
+//                'Исследование на диабет',
+//                'Исследование на зависимости',
+//                'Судмед экспертиза'
+//            ]),
+//            'code' => fake()->numberBetween(10000000, 99999998),
+//            'tests' => json_encode([1, 2, 3, 4]),
         ];
     }
 }

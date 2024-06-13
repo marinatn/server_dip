@@ -24,6 +24,7 @@ class ResearchRequest extends FormRequest
         return [
 			'code' => 'required|string',
 			'name' => 'required|string',
+            'tests' => 'required|string',
         ];
     }
 }

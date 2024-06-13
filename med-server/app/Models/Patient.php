@@ -23,6 +23,7 @@ class Patient extends Model
         'bith_date',
         'snils_code',
         'police_code',
-        'risks'
+        'risks',
+        'sex'
     ];
 }

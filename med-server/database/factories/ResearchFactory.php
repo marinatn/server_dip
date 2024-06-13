@@ -24,6 +24,7 @@ class ResearchFactory extends Factory
                 'Судмед экспертиза'
             ]),
             'code' => fake()->numberBetween(10000000, 99999998),
+            'tests' => json_encode([1, 2, 3, 4]),
         ];
     }
 }

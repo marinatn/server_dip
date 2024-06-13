@@ -7,8 +7,10 @@ use App\Http\Controllers\Api\EquipmentController;
 use App\Http\Controllers\Api\InteractionController;
 use App\Http\Controllers\Api\PatientController;
 use App\Http\Controllers\Api\PointController;
+use App\Http\Controllers\Api\ReferenceController;
 use App\Http\Controllers\Api\ResearchController;
 use App\Http\Controllers\Api\ResearchOrderController;
+use App\Http\Controllers\Api\RiskController;
 use App\Http\Controllers\Api\SampleController;
 use App\Http\Controllers\Api\BiomaterialController;
 use App\Http\Controllers\Api\ContainerController;
@@ -22,11 +24,6 @@ Route::post('/research', [ResearchController::class, 'store'])->name('research.s
 Route::put('/research/{research}', [ResearchController::class, 'update'])->name('research.update');
 Route::delete('/research/{research}', [ResearchController::class, 'destroy'])->name('research.destroy');
 
-Route::get('/tests', [TestController::class, 'index'])->name('test.index');
-Route::get('/tests/{test}', [TestController::class, 'show'])->name('test.show');
-Route::post('/test', [TestController::class, 'store'])->name('test.store');
-Route::put('/test/{test}', [TestController::class, 'update'])->name('test.update');
-Route::delete('/test/{test}', [TestController::class, 'destroy'])->name('test.destroy');
 
 Route::get('/orders', [ResearchOrderController::class, 'index'])->name('order.index');
 Route::get('/orders/{research_order}', [ResearchOrderController::class, 'show'])->name('order.show');
@@ -78,7 +75,33 @@ Route::put('/sample/{sample}', [SampleController::class, 'update'])->name('sampl
 // ...
 
 
+// Patients
 Route::get('/patients', [PatientController::class, 'index'])->name('patient.index');
 Route::get('/patient/{patient}', [PatientController::class, 'show'])->name('patient.show');
 Route::post('/patient', [PatientController::class, 'store'])->name('patient.store');
 Route::put('/patient/{patient}', [PatientController::class, 'update'])->name('patient.update');
+Route::delete('/patient/{patient}', [PatientController::class, 'destroy'])->name('patient.destroy');
+
+
+
+// Tests
+Route::get('/tests', [TestController::class, 'index'])->name('test.index');
+Route::get('/test/{test}', [TestController::class, 'show'])->name('test.show');
+Route::post('/test', [TestController::class, 'store'])->name('test.store');
+Route::put('/test/{test}', [TestController::class, 'update'])->name('test.update');
+Route::delete('/test/{test}', [TestController::class, 'destroy'])->name('test.destroy');
+
+
+// References
+Route::get('/references', [ReferenceController::class, 'index'])->name('reference.index');
+Route::get('/reference/{reference}', [ReferenceController::class, 'show'])->name('reference.show');
+Route::post('/reference', [ReferenceController::class, 'store'])->name('reference.store');
+Route::put('/reference/{reference}', [ReferenceController::class, 'update'])->name('reference.update');
+Route::delete('/reference/{reference}', [ReferenceController::class, 'destroy'])->name('reference.destroy');
+
+// Risks
+Route::get('/risks', [RiskController::class, 'index'])->name('risk.index');
+Route::get('/risk/{risk}', [RiskController::class, 'show'])->name('risk.show');
+Route::post('/risk', [RiskController::class, 'store'])->name('risk.store');
+Route::put('/risk/{risk}', [RiskController::class, 'update'])->name('risk.update');
+Route::delete('/risk/{risk}', [RiskController::class, 'destroy'])->name('risk.destroy');

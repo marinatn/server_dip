@@ -24,12 +24,14 @@ class Test extends Model
 
     protected $perPage = 20;
 
+    protected $table = 'tests';
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
-    protected $fillable = ['code', 'name', 'refer'];
+    protected $fillable = ['code', 'name', 'refs'];
 
 
 }

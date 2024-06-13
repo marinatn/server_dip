@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\BaseController;
 use App\Models\Test;
 use Illuminate\Http\Request;
 use App\Http\Requests\TestRequest;
 use Illuminate\Http\Response;
-use App\Http\Resources\TestResource;
-use Illuminate\Routing\Controller;
 
-class TestController extends Controller
+class TestController extends BaseController
 {
     /**
      * Display a listing of the resource.

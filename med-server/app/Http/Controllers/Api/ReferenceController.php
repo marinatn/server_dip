@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Http\Requests\StoreReferenceRequest;
 use App\Http\Requests\UpdateReferenceRequest;
@@ -14,46 +14,35 @@ class ReferenceController
     public function index()
     {
         //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
+        return Reference::all();
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreReferenceRequest $request)
+    public function store(StoreReferenceRequest $request): Reference
     {
         //
+        return Reference::create($request->validated());
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Reference $reference)
+    public function show(Reference $reference): Reference
     {
         //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Reference $reference)
-    {
-        //
+        return $reference;
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateReferenceRequest $request, Reference $reference)
+    public function update(UpdateReferenceRequest $request, Reference $reference): Reference
     {
-        //
+        $reference->update($request->validated());
+
+        return $reference;
     }
 
     /**
@@ -61,6 +50,8 @@ class ReferenceController
      */
     public function destroy(Reference $reference)
     {
-        //
+        $reference->delete();
+
+        return response()->noContent();
     }
 }

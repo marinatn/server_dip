@@ -5,14 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Reference extends Model
+class Risk extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'name',
-        'min',
-        'max',
-        'risks'
-    ];
+    protected $table = 'risks';
+
+    protected $fillable = ['name'];
 }

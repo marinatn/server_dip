@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Reference>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Risk>
  */
-class ReferenceFactory extends Factory
+class RiskFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,9 +18,6 @@ class ReferenceFactory extends Factory
     {
         return [
             'name' => 'required|string',
-            'min' => 'required|integer',
-            'max' => 'required|integer',
-            'risks' => 'required|string',
         ];
     }
 }

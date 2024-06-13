@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('references', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->float('min');
+            $table->float('max');
+            $table->json('risks');
             $table->timestamps();
         });
     }

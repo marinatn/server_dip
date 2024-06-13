@@ -26,7 +26,8 @@ class StorePatientRequest extends FormRequest
             'police_code' => 'required|string',
             'snils_code' => 'required|string',
             'bith_date' => 'required|date',
-            'risks' => 'required|string'
+            'risks' => 'required|string',
+            'sex' => 'required|string'
         ];
     }
 }

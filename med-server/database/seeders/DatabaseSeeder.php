@@ -34,7 +34,6 @@ class DatabaseSeeder extends Seeder
         Organisation::factory(100)->create();
         Research::factory(100)->create();
         ResearchOrder::factory(100)->create();
-        Test::factory(100)->create();
         Analizator::factory(100)->create();
         Interaction::factory(100)->create();
         Equipment::factory(100)->create();

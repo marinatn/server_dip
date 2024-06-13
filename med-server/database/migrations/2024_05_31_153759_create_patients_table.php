@@ -18,6 +18,7 @@ return new class extends Migration
             $table->date('bith_date');
             $table->string('police_code');
             $table->json('risks');
+            $table->string('sex');
             $table->timestamps();
         });
 

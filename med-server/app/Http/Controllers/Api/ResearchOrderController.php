@@ -59,11 +59,11 @@ class ResearchOrderController extends BaseController
 
     private function getBarCode(ResearchOrder $researchOrder)
     {
-        // на самом деле достаточно только id
         return $researchOrder['id']
-//            . '|' .
-//            $researchOrder['patient_id'] . '|' .
-//            date_format($researchOrder['created_at'], 'U')
+            . '  ' .
+            $researchOrder['patient_id'] . '  ' .
+            implode(' ', json_decode($researchOrder['researches'])) . '  ' .
+            date_format($researchOrder['created_at'], 'U')
             ;
     }
 }

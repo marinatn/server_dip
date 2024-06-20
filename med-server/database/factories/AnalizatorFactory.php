@@ -22,7 +22,7 @@ class AnalizatorFactory extends Factory
             'short_name'=>fake('ru')->city(),
 
             'type_interaction'=>fake()->randomElement([
-               'Автоматический',
+                'Автоматический',
                 'Полуавтоматический',
                 'Ручной',
                 'Двусторонний обмен'

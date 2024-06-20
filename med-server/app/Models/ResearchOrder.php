@@ -35,7 +35,8 @@ class ResearchOrder extends Model
         'patient_id',
         'researches',
 //        'bar_code',
-        'is_cito'
+        'is_cito',
+        'doctor_id'
     ];
 
 

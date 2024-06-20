@@ -13,6 +13,8 @@ class Reference extends Model
         'name',
         'min',
         'max',
-        'risks'
+        'risks',
+        'sex',
+        'unit'
     ];
 }

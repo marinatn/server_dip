@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+        Schema::dropIfExists('patients');
         Schema::create('patients', function (Blueprint $table) {
             $table->id();
             $table->string('fio');
@@ -21,12 +22,6 @@ return new class extends Migration
             $table->string('sex');
             $table->timestamps();
         });
-
-//        'fio',
-//        'bith_date',
-//        'snils_code',
-//        'police_code',
-//        'risks'
     }
 
     /**

@@ -25,6 +25,7 @@ class ResearchRequest extends FormRequest
 			'code' => 'required|string',
 			'name' => 'required|string',
             'tests' => 'required|string',
+            'analyser_id' => 'required|integer|exists:analizators,id',
         ];
     }
 }

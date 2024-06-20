@@ -26,6 +26,8 @@ class StoreReferenceRequest extends FormRequest
             'min' => 'required|numeric|between:0,999.99',
             'max' => 'required|numeric|between:0,999.99',
             'risks' => 'required|string',
+            'sex' => 'required|string',
+            'unit' => 'required|string',
         ];
     }
 }

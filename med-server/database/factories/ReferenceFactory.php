@@ -17,10 +17,10 @@ class ReferenceFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => 'required|string',
-            'min' => 'required|float',
-            'max' => 'required|float',
-            'risks' => 'required|string',
+//            'name' => 'required|string',
+//            'min' => 'required|float',
+//            'max' => 'required|float',
+//            'risks' => 'string',
         ];
     }
 }

@@ -25,7 +25,9 @@ class UpdateReferenceRequest extends FormRequest
             'name' => 'required|string',
             'min' => 'required|integer',
             'max' => 'required|integer',
-            'risks' => 'required|string',
+            'risks' => 'string',
+            'sex' => 'required|string',
+            'unit' => 'required|string',
         ];
     }
 }

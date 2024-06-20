@@ -26,6 +26,7 @@ class ResearchOrderRequest extends FormRequest
             'researches' => 'required|string',
 //			'bar_code' => 'required|string',
 			'is_cito' => 'required|boolean',
+            'doctor_id' => 'required|integer|exists:doctors,id'
         ];
     }
 }

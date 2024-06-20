@@ -17,6 +17,7 @@ return new class extends Migration
             $table->json('researches');
 //            $table->string('bar_code');
             $table->boolean('is_cito');
+            $table->integer('doctor_id');
             $table->timestamps();
         });
     }

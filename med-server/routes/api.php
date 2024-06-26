@@ -10,16 +10,14 @@ use App\Http\Controllers\Api\PointController;
 use App\Http\Controllers\Api\ReferenceController;
 use App\Http\Controllers\Api\ResearchController;
 use App\Http\Controllers\Api\ResearchOrderController;
+use App\Http\Controllers\Api\ResultController;
 use App\Http\Controllers\Api\RiskController;
 use App\Http\Controllers\Api\SampleController;
 use App\Http\Controllers\Api\BiomaterialController;
 use App\Http\Controllers\Api\ContainerController;
 use App\Http\Controllers\Api\TestController;
+use App\Models\Result;
 use Illuminate\Support\Facades\Route;
-
-
-
-
 
 
 Route::get('/analizators', [AnalizatorController::class, 'index'])->name('analizator.index');
@@ -107,3 +105,7 @@ Route::get('/risk/{risk}', [RiskController::class, 'show'])->name('risk.show');
 Route::post('/risk', [RiskController::class, 'store'])->name('risk.store');
 Route::put('/risk/{risk}', [RiskController::class, 'update'])->name('risk.update');
 Route::delete('/risk/{risk}', [RiskController::class, 'destroy'])->name('risk.destroy');
+
+// Result
+Route::get('/results', [ResultController::class, 'index'])->name('result.index');
+Route::get('/result/{result}', [ResultController::class, 'show'])->name('result.show');

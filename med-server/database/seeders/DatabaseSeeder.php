@@ -16,6 +16,7 @@ use App\Models\Organisation;
 use App\Models\Reference;
 use App\Models\Research;
 use App\Models\ResearchOrder;
+use App\Models\Result;
 use App\Models\Risk;
 use App\Models\Sample;
 use App\Models\Test;
@@ -34,6 +35,6 @@ class DatabaseSeeder extends Seeder
         Doctor::factory(25)->create();
         Patient::factory(100)->create();
         ResearchOrder::factory(100)->create();
-
+        Result::factory(100)->create();
     }
 }
